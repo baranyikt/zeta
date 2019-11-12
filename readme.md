@@ -36,7 +36,7 @@ auto myValueCollector = [](const arg_t& x, const arg_t& y) {
 	ConvertComplexToHSL(y, hue, saturation, lightness);
 	SetPixelColor(scale(real(x)),scale(imag(x)),HSLtoRGB(hue, saturation, lightness));
 }
-CalculateRiemannZetaFn({0.3,0.0}, {0.6,100.0}, &myValueCollector);
+CalculateRiemannZetaFn({0.3,0.0}, {0.6,100.0}, myValueCollector);
 ```
 ##### Some functions doing internal calculations are available, too:
 ```c++
